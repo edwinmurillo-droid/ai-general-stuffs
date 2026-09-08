@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI General Stuff — Your AI Launchpad</title>
+  <meta name="description" content="A curated hub of the best AI tools, launches, and resources. Curated by Edwin Murillo.">
+  <style>
+    :root {
+      --ph-orange: #ff6154;
+      --ph-dark: #1f1f1f;
+      --bg: #f9f9f9;
+      --card-bg: #ffffff;
+      --text: #1f1f1f;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* ===== Header ===== */
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .logo span { color: var(--ph-orange); }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      margin-left: 20px;
+    }
+    nav a:hover { color: var(--ph-orange); }
+
+    /* ===== Hero ===== */
+    .hero {
+      text-align: center;
+      padding: 72px 24px 56px;
+    }
+    .hero h1 {
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      margin-bottom: 12px;
+    }
+    .hero h1 em { color: var(--ph-orange); font-style: normal; }
+    .hero p {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 560px;
+      margin: 0 auto 28px;
+      line-height: 1.5;
+    }
+    .btn-primary {
+      background: var(--ph-orange);
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: #ff4d3f; }
+
+    /* ===== Featured (Product Hunt) ===== */
+    .featured {
+      max-width: 760px;
+      margin: 0 auto 56px;
+      padding: 0 24px;
+    }
+    .featured-card {
+      background: var(--card-bg);
+      border: 2px solid var(--ph-orange);
+      border-radius: 16px;
+      padding: 28px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      box-shadow: 0 4px 14px rgba(255, 97, 84, 0.15);
+    }
+    .featured-icon {
+      width: 72px; height: 72px;
+      border-radius: 16px;
+      background: var(--ph-orange);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      flex-shrink: 0;
+    }
+    .featured-body h2 {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .featured-body p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .featured-body a {
+      color: var(--ph-orange);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 14px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .tag-new {
+      background: #fff0ef;
+      color: var(--ph-orange);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.5px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    /* ===== Grid ===== */
+    .section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px 72px;
+    }
+    .section h2 {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .card:hover { border-color: var(--ph-orange); }
+    .card-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: #fdf0ef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .card h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .card p { color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .upvote {
+      margin-left: auto;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 10px;
+      text-align: center;
+      font-weight: 800;
+      font-size: 12px;
+      color: var(--ph-orange);
+      flex-shrink: 0;
+    }
+    .upvote small { display: block; color: var(--muted); font-weight: 600; font-size: 10px; }
+
+    /* ===== Footer ===== */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    footer a { color: var(--ph-orange); text-decoration: none; font-weight: 600; }
+
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 32px; }
+      .featured-card { flex-direction: column; text-align: center; }
+      nav a { margin-left: 12px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">AI General <span>Stuff</span></div>
+    <nav>
+      <a href="#featured">Featured</a>
+      <a href="#tools">Tools</a>
+      <a href="https://www.producthunt.com/" target="_blank" rel="noopener">Product Hunt ↗</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Discover what's <em>next</em> in AI</h1>
+    <p>The best new AI tools, launches, and resources — hand-picked and curated in one place. Fresh finds added regularly.</p>
+    <a class="btn-primary" href="https://www.producthunt.com/" target="_blank" rel="noopener">Browse Today's Launches</a>
+  </section>
+
+  <section class="featured" id="featured">
+    <div class="featured-card">
+      <div class="featured-icon">🚀</div>
+      <div class="featured-body">
+        <h2>Product Hunt <span class="tag-new">FEATURED</span></h2>
+        <p>The definitive place to discover the newest AI products and launches every single day. Upvote, review, and find your next favorite tool — this is our first and favorite stop.</p>
+        <a href="https://www.producthunt.com/" target="_blank" rel="noopener">Visit producthunt.com →</a>
+      </div>
+    </div>
+  </section>
+
+      <section class="section" id="promo" style="text-align:center;">
+      <h2>Featured Video</h2>
+      <p style="color:#8b8f98;margin-bottom:24px;">Times Square, reimagined — neon that moves.</p>
+      <video controls autoplay muted loop playsinline style="width:100%;max-width:420px;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.5);" src="signs-moving.mp4"></video>
+    </section>
+    <section class="section" id="tools">
+    <h2>More AI Resources</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">🧠</div>
+        <div>
+          <h3>AI Newsletters</h3>
+          <p>Weekly digests covering models, funding, and product launches.</p>
+        </div>
+        <div class="upvote">▲<small>128</small></div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛠️</div>
+        <div>
+          <h3>Tool Directories</h3>
+          <p>Curated collections of AI apps by category — writing, image, code, sales.</p>
+        </div>
+        <div class="upvote">▲<small>96</small></div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎓</div>
+        <div>
+          <h3>Learning Hubs</h3>
+          <p>Courses and masterclasses to sharpen your AI skills.</p>
+        </div>
+        <div class="upvote">▲<small>84</small></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Curated by <a href="https://www.allin1sdm.com/" target="_blank" rel="noopener">Edwin Murillo</a> · All in 1 Sales Distribution & More LLC · Built with ❤️ for AI enthusiasts
+  </footer>
+
+</body>
+</html>
