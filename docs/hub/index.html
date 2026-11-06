@@ -53,11 +53,11 @@
 </head>
 <body id="top">
 <a class="skip" href="#main">Skip to content</a>
-<div class="noscript">
-  <noscript>
+<noscript>
+  <div class="noscript">
     <div class="wrap">JavaScript is off. Install links still work. For the Pro waitlist, email Edwin.Murillo@allin1sdm.com.</div>
-  </noscript>
-</div>
+  </div>
+</noscript>
 
 <header class="site-header">
   <div class="wrap header-inner">
@@ -83,12 +83,14 @@
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
       <a href="#privacy">Privacy</a>
-      <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/tab-commander/bkeacpglbifipmmkofcjkoligeampnmc">Add to Chrome<span class="sr-only"> on the Chrome Web Store</span></a>
+      <a href="products.html">More products</a>
+      <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/tab-commander/bkeacpglbifipmmkofcjkoligeampnmc">Add to Chrome<span class="sr-only"> for desktop, on the Chrome Web Store</span></a>
+      <p class="nav-install-note">Desktop Chrome or Edge. Not a phone install.</p>
     </nav>
   </div>
 </header>
 
-<main id="main">
+<main id="main" tabindex="-1">
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap hero-grid">
       <div>
@@ -96,12 +98,12 @@
         <h1 id="hero-title">Every open tab. One live dashboard.</h1>
         <p class="lede">Search by title or URL, close a selection, or say which tabs to close — across every Chrome window.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/tab-commander/bkeacpglbifipmmkofcjkoligeampnmc">Add to Chrome<span class="sr-only"> on the Chrome Web Store</span></a>
+          <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/tab-commander/bkeacpglbifipmmkofcjkoligeampnmc">Add to Chrome<span class="sr-only"> for desktop, on the Chrome Web Store</span></a>
           <a class="btn btn-ghost" href="#demo">See how it works</a>
         </div>
-        <p class="fine">Free on the Chrome Web Store. No account. The publisher has confirmed it also runs in Microsoft Edge.</p>
+        <p class="fine">Free on the Chrome Web Store. No account. Desktop Chrome, and desktop Edge as confirmed by the publisher. Not a phone install.</p>
         <ul class="trust">
-          <li>Tabs stay on this device</li>
+          <li>Tab list stays on this device</li>
           <li>Asks before closing more than three</li>
           <li>Manifest V3</li>
         </ul>
@@ -290,7 +292,8 @@
             <li>Confirm before closing more than three</li>
             <li>Stored only in Chrome on this device</li>
           </ul>
-          <a class="btn btn-ink" href="https://chromewebstore.google.com/detail/tab-commander/bkeacpglbifipmmkofcjkoligeampnmc">Add to Chrome<span class="sr-only"> on the Chrome Web Store</span></a>
+          <a class="btn btn-ink" href="https://chromewebstore.google.com/detail/tab-commander/bkeacpglbifipmmkofcjkoligeampnmc">Add to Chrome<span class="sr-only"> for desktop, on the Chrome Web Store</span></a>
+          <p class="install-note">Desktop Chrome or Edge. Not a phone install.</p>
         </article>
 
         <article class="price-card featured">
@@ -326,9 +329,10 @@
         </article>
       </div>
 
-      <div class="table-wrap">
+      <p class="swipe-cue" id="compare-cue">Swipe sideways, or focus this table and use the arrow keys, to compare Free and Pro.</p>
+      <div class="table-wrap" tabindex="0" role="region" aria-labelledby="compare-caption" aria-describedby="compare-cue">
         <table class="compare">
-          <caption>Free and Pro, side by side</caption>
+          <caption id="compare-caption">Free and Pro, side by side</caption>
           <thead>
             <tr>
               <th scope="col">Capability</th>
@@ -469,7 +473,7 @@
             </button>
           </h3>
           <div id="faq-browser" class="faq-panel" role="region" aria-labelledby="faq-browser-btn" hidden>
-            <p>Version 1.0.0 is a Manifest V3 extension listed on the Chrome Web Store. The publisher has confirmed that the same extension also runs in Microsoft Edge. Voice commands need the browser’s Web Speech API. The store button on this page is the Chrome listing.</p>
+            <p>Version 1.0.0 is a Manifest V3 extension listed on the Chrome Web Store for desktop Chrome. The publisher has confirmed that the same extension also runs in desktop Microsoft Edge. The store buttons on this page are not a phone install. Voice commands need the browser’s Web Speech API.</p>
           </div>
         </div>
       </div>
@@ -493,8 +497,9 @@
       <h2 id="final-title">Put every window on one page.</h2>
       <p class="lede">Tab Commander 1.0.0 is free. Install it, click the icon, and close the tabs you don’t need.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/tab-commander/bkeacpglbifipmmkofcjkoligeampnmc">Add to Chrome<span class="sr-only"> on the Chrome Web Store</span></a>
+        <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/tab-commander/bkeacpglbifipmmkofcjkoligeampnmc">Add to Chrome<span class="sr-only"> for desktop, on the Chrome Web Store</span></a>
         <a class="btn btn-ghost" href="#pricing">Compare Free and Pro</a>
+        <p class="install-note install-note-dark">Desktop Chrome or Edge. Not a phone install.</p>
       </div>
     </div>
   </section>
@@ -509,7 +514,7 @@
     </div>
     <div>
       <p>Contact <a href="mailto:Edwin.Murillo@allin1sdm.com">Edwin.Murillo@allin1sdm.com</a></p>
-      <p><a href="https://chromewebstore.google.com/detail/tab-commander/bkeacpglbifipmmkofcjkoligeampnmc">Chrome Web Store</a> · <a href="#privacy">Privacy note</a> · <a href="https://edwinmurillo-droid.github.io/ai-general-stuffs/privacy.html">Privacy policy</a></p>
+      <p><a href="products.html">More products</a> · <a href="https://chromewebstore.google.com/detail/tab-commander/bkeacpglbifipmmkofcjkoligeampnmc">Chrome Web Store</a> · <a href="#privacy">Privacy note</a> · <a href="https://edwinmurillo-droid.github.io/ai-general-stuffs/privacy.html">Privacy policy</a></p>
     </div>
   </div>
 </footer>

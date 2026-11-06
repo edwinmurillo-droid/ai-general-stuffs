@@ -119,6 +119,15 @@
     });
   }
 
+  document.querySelectorAll(".table-wrap").forEach(function (region) {
+    region.addEventListener("keydown", function (event) {
+      if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+      if (region.scrollWidth <= region.clientWidth) return;
+      region.scrollLeft += event.key === "ArrowRight" ? 80 : -80;
+      event.preventDefault();
+    });
+  });
+
   document.querySelectorAll(".faq-item button").forEach(function (button) {
     button.addEventListener("click", function () {
       var panel = document.getElementById(button.getAttribute("aria-controls"));
