@@ -655,10 +655,39 @@ p {
   width: 100%;
   max-width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
   background: #07080c;
   border: 1px solid var(--line);
   border-radius: 16px;
+}
+
+.demo-video-wide {
+  aspect-ratio: 16 / 9;
+}
+
+.demo-video-square {
+  display: none;
+  aspect-ratio: 1 / 1;
+  max-width: 32rem;
+  margin-inline: auto;
+}
+
+.demo-transcript {
+  margin-top: 14px;
+  max-width: 42rem;
+  color: var(--muted);
+}
+
+.demo-transcript summary {
+  cursor: pointer;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--text);
+}
+
+.demo-transcript ol {
+  margin: 8px 0 0;
+  padding-left: 1.2rem;
 }
 
 .demo-figure figcaption {
@@ -666,6 +695,16 @@ p {
   max-width: 42rem;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+@media (max-width: 720px) {
+  .demo-video-wide {
+    display: none;
+  }
+
+  .demo-video-square {
+    display: block;
+  }
 }
 
 .section {
